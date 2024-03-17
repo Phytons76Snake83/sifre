@@ -1,0 +1,18 @@
+import random,time
+
+karakter = "+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+
+while True:
+    cevap = int(input("şifrenizin kaç karakter olmasını istersiniz? (en az 8 olmalı): "))
+
+    sifre =""
+
+    if cevap < 8:
+        print("üzgünüm,fakat bu 8 den az")
+        time.sleep(2)
+        cevap = int(input("şifrenizin kaç karakter olmasını istersiniz? (en az 8 olmalı): "))
+
+    for i in range (cevap):   
+        sifre = sifre + random.choice(karakter) 
+
+    print(sifre)
